@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Balaji Gas Repairs - Professional Gas Stove & Chimney Repair Bangalore{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- FAVICONS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  
+  
+  {% include 'partials/navbar.html' %}
+
+  {% block content %}{% endblock %}
+
+  {% include 'partials/footer.html' %}
+
+  
+
+  <script>
+    // Hero slider - updated for animation compatibility if needed
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length) {
+      let current = 0;
+      function nextSlide() {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }
+      setInterval(nextSlide, 5000);
+    }
+
+    // Hamburger & Dropdown logic
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-active');
+        hamburger.classList.toggle('toggle');
+      });
+    }
+  </script>
+  {% block extra_js %}{% endblock %}
+
+  <!-- FLOATING CONTACT ICONS -->
+  <div class="floating-contact">
+    <a href="https://wa.me/919799011663" class="floating-icon whatsapp" target="_blank" title="WhatsApp Us">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    <a href="tel:+919799011663" class="floating-icon phone" title="Call Us">
+        <div class="phone-icon-wrap">📞</div>
+    </a>
+  </div>
+</body>
+</html>

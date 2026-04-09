@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section id="hero" class="hero">
+  <div class="hero-bg-decor bottom-right"></div>
+  <div class="slide active">
+    <div class="slide-text">
+      <span class="slide-tag">Authorized Service Center</span>
+      <h1>Expert <span class="highlight">Gas Stove & Chimney</span> Repair in Bangalore</h1>
+      <p>Instant repair for all kitchen appliances. 100% Genuine parts, trained technicians, and same-day service by Pradeep & Team.</p>
+      <div class="slide-btns">
+        <a href="tel:+919799011663" class="btn-primary">Book Now 🚀</a>
+        <a href="#services" class="btn-outline">Our Services</a>
+      </div>
+    </div>
+    <div class="slide-image">
+      <img src="{{ url_for('static', filename='images/chimney_Repair.PNG') }}" alt="Professional Gas Repair" />
+      <div class="slide-image-overlay">
+        <span class="slide-image-badge">Verified Experts</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-banner-text">
+    <h2>Ready for a Same-Day Kitchen Fix?</h2>
+    <p>Call Pradeep and the team — available 7 days a week across Bangalore.</p>
+  </div>
+  <a href="tel:+919799011663" class="cta-banner-btn">📞 Call 9799011663</a>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="section bg-alt-1">
+  <span class="section-label">Expert Solutions</span>
+  <h2 class="section-heading">Our <span>Repair Services</span></h2>
+  <p class="section-sub">Quick and safe repairs for all your kitchen appliances in Bangalore.</p>
+  
+  <div class="services-grid">
+    <!-- Service 1 -->
+    <div class="service-card">
+      <div class="service-img-wrap">
+        <img src="{{ url_for('static', filename='images/chimney_Repair.PNG') }}" alt="Chimney Repair" />
+      </div>
+      <div class="service-info">
+        <h3 class="service-name">Chimney Repair</h3>
+        <p class="service-desc">Fixing suction issues, motor noise, and deep cleaning services.</p>
+        <div class="service-actions">
+          <button class="service-btn service-btn-ghost" onclick="openModal('Chimney Repair', 'We provide comprehensive chimney repair services including motor replacement, suction optimization, and filter deep cleaning to ensure your kitchen remains smoke-free.', '{{ url_for('static', filename='images/chimney_Repair.PNG') }}')">Learn More</button>
+          <a href="tel:+919799011663" class="service-btn service-btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-card">
+      <div class="service-img-wrap">
+        <img src="{{ url_for('static', filename='images/gas_stove.jpeg') }}" alt="Gas Stove Repair" />
+      </div>
+      <div class="service-info">
+        <h3 class="service-name">Gas Stove Repair</h3>
+        <p class="service-desc">Repairs for low flame, gas leakage, and burner blockages.</p>
+        <div class="service-actions">
+          <button class="service-btn service-btn-ghost" onclick="openModal('Gas Stove Repair', 'Professional repair for all types of gas stoves. We handle burner cleaning, knob replacement, and leakage detection with safety-first protocols.', '{{ url_for('static', filename='images/gas_stove.jpeg') }}')">Learn More</button>
+          <a href="tel:+919799011663" class="service-btn service-btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-card">
+      <div class="service-img-wrap">
+        <img src="{{ url_for('static', filename='images/gas_hob.PNG') }}" alt="Gas Hob Repair" />
+      </div>
+      <div class="service-info">
+        <h3 class="service-name">Gas Hob Repair</h3>
+        <p class="service-desc">Electronic ignition repair and glass-top restoration.</p>
+        <div class="service-actions">
+          <button class="service-btn service-btn-ghost" onclick="openModal('Gas Hob Repair', 'Specialized maintenance for built-in hobs. Whether it is auto-ignition failure or glass-top damage, we fix it all.', '{{ url_for('static', filename='images/gas_hob.PNG') }}')">Learn More</button>
+          <a href="tel:+919799011663" class="service-btn service-btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service-card">
+      <div class="service-img-wrap">
+        <img src="{{ url_for('static', filename='images/cooking_range.PNG') }}" alt="Cooking Range Repair" />
+      </div>
+      <div class="service-info">
+        <h3 class="service-name">Cooking Range</h3>
+        <p class="service-desc">Oven heating and burner coordination repairs for ranges.</p>
+        <div class="service-actions">
+          <button class="service-btn service-btn-ghost" onclick="openModal('Cooking Range Repair', 'Complete repair for cooking ranges, including oven thermostat issues and multi-burner coordination.', '{{ url_for('static', filename='images/cooking_range.PNG') }}')">Learn More</button>
+          <a href="tel:+919799011663" class="service-btn service-btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="service-card">
+      <div class="service-img-wrap">
+        <img src="{{ url_for('static', filename='images/hob_serving_cleaning.PNG') }}" alt="Hob Cleaning" />
+      </div>
+      <div class="service-info">
+        <h3 class="service-name">Hob Servicing</h3>
+        <p class="service-desc">Deep cleaning and periodic maintenance for gas hobs.</p>
+        <div class="service-actions">
+          <button class="service-btn service-btn-ghost" onclick="openModal('Hob Servicing', 'Keep your hob in top condition with our periodic cleaning and servicing packages. Prevents blockages and ensures safety.', '{{ url_for('static', filename='images/hob_serving_cleaning.PNG') }}')">Learn More</button>
+          <a href="tel:+919799011663" class="service-btn service-btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 6 -->
+    <div class="service-card">
+      <div class="service-img-wrap">
+        <img src="{{ url_for('static', filename='images/display.PNG') }}" alt="Display Repair" />
+      </div>
+      <div class="service-info">
+        <h3 class="service-name">Control Repair</h3>
+        <p class="service-desc">Fixing digital displays and PCB boards for hobs and chimneys.</p>
+        <div class="service-actions">
+          <button class="service-btn service-btn-ghost" onclick="openModal('Control Repair', 'We fix faulty PCB modules and unresponsive digital control panels in chimneys and modern modular hobs.', '{{ url_for('static', filename='images/display.PNG') }}')">Learn More</button>
+          <a href="tel:+919799011663" class="service-btn service-btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS SECTION -->
+<section id="brands" class="section bg-alt-2">
+  <span class="section-label">Trusted Brands</span>
+  <h2 class="section-heading">Repairing All <span>Major Brands</span></h2>
+  <p class="section-sub">Expert repair and genuine spare parts for all leading kitchen appliance brands.</p>
+  
+  <img src="{{ url_for('static', filename='images/brands.webp') }}" alt="Trusted Service Brands" class="brands-single-img" />
+</section>
+
+<!-- PROCESS SECTION -->
+<section id="process" class="section bg-alt-1">
+  <span class="section-label">How It Works</span>
+  <h2 class="section-heading">Our <span>Repair Process</span></h2>
+  <div class="process-grid">
+    <div class="process-item">
+      <div class="process-icon">1</div>
+      <h4>Book Your Service</h4>
+      <p>Call or book online. We schedule visits within 2 hours across Bangalore.</p>
+    </div>
+    <div class="process-item">
+      <div class="process-icon">2</div>
+      <h4>Technician Visits</h4>
+      <p>Pradeep or our expert team visits your location for a detailed inspection.</p>
+    </div>
+    <div class="process-item">
+      <div class="process-icon">3</div>
+      <h4>Fix & Test</h4>
+      <p>Instant repair using genuine parts followed by a safety and performance test.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS SECTION -->
+<section id="reviews" class="section bg-light">
+  <span class="section-label">Customer Feedback</span>
+  <h2 class="section-heading">What Our <span>Clients Say</span></h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Pradeep was very professional. He fixed my Faber hob which had ignition issues in just 30 minutes. Highly recommended!"</p>
+      <div class="review-author">- Rajesh Kumar, HSR Layout</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Excellent chimney cleaning service. They were on time and very thorough. The suction has significantly improved."</p>
+      <div class="review-author">- Priya Sharma, Indiranagar</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Best gas stove repair in Bangalore. Safe, reliable, and reasonably priced. Fixed the leak immediately."</p>
+      <div class="review-author">- Amit Singh, Whitefield</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL CONNECT SECTION -->
+<section id="connect" class="section bg-alt-2">
+  <span class="section-label">Follow Us</span>
+  <h2 class="section-heading">Connect <span>With Us</span></h2>
+  <p class="section-sub">Stay updated with repair tips, service videos, and offers on our social channels.</p>
+  
+  <div class="social-grid">
+    <!-- WhatsApp -->
+    <div class="social-card whatsapp">
+      <div class="social-card-top">
+        <div class="social-icon">💬</div>
+        <h3>WhatsApp</h3>
+      </div>
+      <div class="social-card-body">
+        <p>Chat with us directly for quick bookings & queries.</p>
+        <a href="https://wa.me/919799011663" target="_blank" class="social-card-btn">Message Us</a>
+      </div>
+    </div>
+    
+    <!-- Instagram -->
+    <div class="social-card instagram">
+      <div class="social-card-top">
+        <div class="social-icon">📸</div>
+        <h3>Instagram</h3>
+      </div>
+      <div class="social-card-body">
+        <p>Follow @balaji.gasrepairs for tips, reels & behind-the-scenes.</p>
+        <a href="#" class="social-card-btn">Follow Us</a>
+      </div>
+    </div>
+    
+    <!-- YouTube -->
+    <div class="social-card youtube">
+      <div class="social-card-top">
+        <div class="social-icon">🎥</div>
+        <h3>YouTube</h3>
+      </div>
+      <div class="social-card-body">
+        <p>Repair tutorials & service demos on our channel.</p>
+        <a href="#" class="social-card-btn">Subscribe</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="section bg-light">
+  <span class="section-label">Help Center</span>
+  <h2 class="section-heading">Frequently <span>Asked Questions</span></h2>
+  <div style="max-width: 800px; margin: 0 auto;">
+    <div style="margin-bottom: 20px; border-bottom: 1px solid var(--gray-200); padding-bottom: 10px;">
+      <h4 style="margin-bottom: 10px;">Do you provide same-day service?</h4>
+      <p class="whyus-desc">Yes, we provide same-day gas stove and chimney repair services across Bangalore.</p>
+    </div>
+    <div style="margin-bottom: 20px; border-bottom: 1px solid var(--gray-200); padding-bottom: 10px;">
+      <h4 style="margin-bottom: 10px;">Are the spare parts genuine?</h4>
+      <p class="whyus-desc">Absolutely. We only use 100% genuine and brand-compatible spare parts for all repairs.</p>
+    </div>
+    <div style="margin-bottom: 20px; border-bottom: 1px solid var(--gray-200); padding-bottom: 10px;">
+      <h4 style="margin-bottom: 10px;">Do you charge for inspection?</h4>
+      <p class="whyus-desc">Our inspection fee is minimal and is adjusted if you proceed with the repair service.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL COMPONENT -->
+<div id="serviceModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="modal-body">
+      <span class="modal-label">Service Details</span>
+      <h2 id="modalTitle" class="modal-title">Chimney Repair</h2>
+      <p id="modalText" class="modal-text">Detailed service information goes here.</p>
+      <a href="tel:+919799011663" class="modal-btn">Book This Service 🚀</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(title, text, imgSrc) {
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalText').innerText = text;
+    document.getElementById('serviceModal').style.display = 'block';
+  }
+
+  function closeModal() {
+    document.getElementById('serviceModal').style.display = 'none';
+  }
+
+  // Close modal when clicking outside
+  window.onclick = function(event) {
+    if (event.target == document.getElementById('serviceModal')) {
+      closeModal();
+    }
+  }
+</script>
+{% endblock %}
