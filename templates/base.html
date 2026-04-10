@@ -9,11 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <!-- FAVICONS -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
-  <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
-  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.PNG') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.PNG') }}">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   {% block extra_css %}{% endblock %}
@@ -50,6 +47,14 @@
       hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('nav-active');
         hamburger.classList.toggle('toggle');
+      });
+
+      // Close menu when a link is clicked
+      navLinks.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          navLinks.classList.remove('nav-active');
+          hamburger.classList.remove('toggle');
+        }
       });
     }
   </script>
