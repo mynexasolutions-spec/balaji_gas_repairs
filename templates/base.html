@@ -4,6 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}Balaji Gas Repairs - Professional Gas Stove & Chimney Repair Bangalore{% endblock %}</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="{% block meta_description %}Balaji Gas Repairs offers expert gas stove, chimney, and hob repair services in Bangalore. Same-day service, 100% genuine parts, and trained technicians starting at ₹99.{% endblock %}" />
+  <meta name="keywords" content="gas stove repair bangalore, chimney repair bangalore, gas hob repair bangalore, balaji gas repairs, kitchen appliance service bangalore, gas leakage repair bangalore" />
+  <meta name="author" content="Balaji Gas Repairs" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="{% block canonical_url %}https://balajigasrepairs.com/{% endblock %}" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://balajigasrepairs.com/" />
+  <meta property="og:title" content="Balaji Gas Repairs - Expert Kitchen Appliance Repair in Bangalore" />
+  <meta property="og:description" content="Instant gas stove, chimney, and hob repair for all brands in Bangalore. 30-minute visit and reliable service starting at ₹99." />
+  <meta property="og:image" content="{{ url_for('static', filename='images/logo.PNG', _external=True) }}" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://balajigasrepairs.com/" />
+  <meta property="twitter:title" content="Balaji Gas Repairs - Expert Kitchen Appliance Repair in Bangalore" />
+  <meta property="twitter:description" content="Instant gas stove, chimney, and hob repair for all brands in Bangalore. 30-minute visit and reliable service starting at ₹99." />
+  <meta property="twitter:image" content="{{ url_for('static', filename='images/logo.PNG', _external=True) }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,6 +35,16 @@
 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   {% block extra_css %}{% endblock %}
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18082897295"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18082897295');
+  </script>
 </head>
 <body>
   
